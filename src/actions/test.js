@@ -24,5 +24,13 @@ describe('Actions', () => {
 
     expect(actions.deleteTodo(1)).toEqual(expectedAction);
   });
+
+  it('should create an action to undelete', () => {
+    const expectedAction = {
+      type: types.UNDELETE,
+    };
+
+    expect(actions.unDelete()).toEqual(expectedAction);
+  });
 });
 

@@ -20,7 +20,13 @@ const actions = {
     return {
       type: types.DELETE_TODO,
       id,
-    }
+    };
+  },
+
+  unDelete() {
+    return {
+      type: types.UNDELETE,
+    };
   },
 };
 

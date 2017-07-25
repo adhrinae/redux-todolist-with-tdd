@@ -14,6 +14,7 @@ describe('TodoList Component', () => {
         text: 'A todo',
       },
     ],
+    deleted: {},
     deleteTodo: deleteMock,
   };
 
