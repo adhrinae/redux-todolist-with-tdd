@@ -44,11 +44,7 @@ AddTodo.propTypes = {
       id: PropTypes.number,
       text: PropTypes.string,
     },
-  ),
-};
-
-AddTodo.defaultProps = {
-  deleted: {},
+  ).isRequired,
 };
 
 export default AddTodo;

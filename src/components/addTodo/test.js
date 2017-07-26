@@ -33,7 +33,9 @@ describe('AddTodo component', () => {
     });
 
     it('should call the submitTodo function when clicked', () => {
-      component = mount(<AddTodo submitTodo={submitMock} unDelete={undoMock} />);
+      component = mount(
+        <AddTodo submitTodo={submitMock} unDelete={undoMock} deleted={{}} />,
+      );
 
       expect(submitMock.mock.calls.length).toEqual(0);
       component.find('form').simulate('submit');
@@ -70,7 +72,7 @@ describe('AddTodo component', () => {
       };
 
       component = mount(
-        <AddTodo submitTodo={submitMock} unDelete={undoMock} deleted={deletedTodo} />
+        <AddTodo submitTodo={submitMock} unDelete={undoMock} deleted={deletedTodo} />,
       );
 
       expect(undoMock.mock.calls.length).toEqual(0);

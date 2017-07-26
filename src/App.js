@@ -21,12 +21,12 @@ App.propTypes = {
       text: PropTypes.string.isRequired,
     },
   )).isRequired,
-  deleted: PropTypes.objectOf(PropTypes.shape(
+  deleted: PropTypes.shape(
     {
-      id: PropTypes.number.isRequired,
-      text: PropTypes.string.isRequired,
+      id: PropTypes.number,
+      text: PropTypes.string,
     },
-  )).isRequired,
+  ).isRequired,
   deleteTodo: PropTypes.func.isRequired,
   unDelete: PropTypes.func.isRequired,
 };
